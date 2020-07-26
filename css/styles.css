@@ -16,7 +16,7 @@ body {
 }
 
 .contenedor_2 {
-  width: 70%;
+  width: 69%;
   max-width: 1000px;
   margin: 0 auto;
   overflow: hidden;
@@ -61,13 +61,12 @@ a.on {
 #li {
   display: inline;
   margin: 0px 3px;
-  border: blacksolid 1px;
 }
 
 .a1 {
   color: #000000;
   text-decoration: none;
-  padding: 4%;
+  padding: 0px 30px 0px 30px;
 }
 
 a {
@@ -80,7 +79,7 @@ a {
   border: solid 2px gray;
   padding: 25px;
   box-sizing: border-box;
-  height: 325px;
+  float: center;
 }
 
 .boton {
@@ -127,9 +126,11 @@ input.submit:active {
 }
 
 .contenedor_4 {
-  width: 90%;
+  width: 70%;
   text-align: center;
-  float: middle;
+  float: center;
+  padding: 50px;
+  overflow: hidden;
 }
 
 .contenedor_5 {
@@ -150,4 +151,106 @@ div label {
 .input_2 {
   padding: 10px 50px 10px 30px;
   cursor: text;
+}
+
+.alineado_2 {
+  width: 17%;
+  padding: 20px;
+}
+
+.contenedor_6 {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  float: center;
+  border: black;
+  border-radius: 20px;
+}
+
+td.encuesta {
+  text-align: left;
+  padding: 20px 50px 5px 5px;
+}
+
+td.encuesta_1 {
+  text-align: right;
+}
+
+textarea {
+  padding: 10px;
+}
+
+.table {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.contenedor_7 {
+  width: 90%;
+  margin: 0 auto;
+  padding: 25px;
+  box-sizing: border-box;
+  float: center;
+  overflow: hidden;
+}
+.contenedor_8 {
+  width: 31%;
+  height: 300px;
+  margin: 10px 10px 10px 10px;
+  border: solid 1px gray;
+  padding: 25px;
+  box-sizing: border-box;
+  float: left;
+  overflow: hidden;
+  text-align: center;
+}
+
+.scroll {
+  overflow: scroll;
+  padding: 10px;
+  height: 200px;
+}
+
+.div_form {
+  width: 80%;
+  overflow: hidden;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.div_form1 {
+  width: 80%;
+  overflow: hidden;
+  box-sizing: border-box;
+  text-align: left;
+  margin: 0 auto;
+  clear: both;
+  display: inline-block;
+}
+
+.boton_2 {
+  width: 50%;
+  text-decoration: none;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 20px;
+  background-color: #0097e6;
+  border-radius: 10px;
+  padding-top: 10px;
+  color: black;
+}
+
+.table_1 {
+  width: 100%;
+}
+.table_2 {
+  width: 50%;
+}
+.table_3 {
+  width: 50%;
+  text-align: center;
 }
