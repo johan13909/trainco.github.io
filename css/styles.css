@@ -108,3 +108,46 @@ input.submit:hover {
 input.submit:active {
   background-color: green;
 }
+
+.boton_1 {
+  width: 16%;
+  text-decoration: none;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 20px;
+  background-color: #beb0b0;
+  border-radius: 10px;
+  padding-top: 10px;
+  color: black;
+}
+
+.alineado_1 {
+  width: 12%;
+  padding-right: 20px;
+}
+
+.contenedor_4 {
+  width: 90%;
+  text-align: center;
+  float: middle;
+}
+
+.contenedor_5 {
+  width: 55%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  float: center;
+}
+
+div label {
+  width: 60%;
+  float: left;
+  padding: 5px;
+}
+
+.input_2 {
+  padding: 10px 50px 10px 30px;
+  cursor: text;
+}
