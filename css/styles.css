@@ -63,6 +63,12 @@ a.on {
   margin: 0px 3px;
 }
 
+#li2 {
+  display: inline;
+  margin: 0px 3px;
+  padding: 65px 65px 65px 65px;
+}
+
 .a1 {
   color: #000000;
   text-decoration: none;
@@ -198,6 +204,18 @@ textarea {
 }
 .contenedor_8 {
   width: 31%;
+  height: 300px;
+  margin: 10px 10px 10px 10px;
+  border: solid 1px gray;
+  padding: 25px;
+  box-sizing: border-box;
+  float: left;
+  overflow: hidden;
+  text-align: center;
+}
+
+.contenedor_9 {
+  width: 47%;
   height: 300px;
   margin: 10px 10px 10px 10px;
   border: solid 1px gray;
