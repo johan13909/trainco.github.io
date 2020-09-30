@@ -338,13 +338,31 @@ textarea {
 
 .centrado {
   position: absolute;
-  top: 28%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 25%;
+  width: 100%;
   text-align: center;
   font-family: 'Bodoni MT';
   color: white;
   font-size: 20px;
+  float: left;
+}
+
+.centrado_1 {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  text-align: right;
+  font-family: 'Bodoni MT';
+  color: white;
+  font-size: 20px;
+  float: left;
+}
+
+.a2 {
+  color: white;
+  padding: 20px 30px;
+  border: none;
+  outline: none;
 }
 
 .cuadros {
@@ -422,13 +440,12 @@ textarea {
 
 .contacto_2 {
   width: 55%;
-  height: 20%;
+  height: 21%;
   margin: 0 auto;
   font-family: sans-serif;
   background-color: #dfdfdf;
   display: block;
   float: right;
-  display: block;
 }
 
 #title_contacto {
@@ -461,6 +478,10 @@ textarea {
   width: 49.6%;
 }
 
+.input_3:hover {
+  border-bottom: 2px solid #52759e;
+}
+
 .textarea {
   border: none;
   outline: none;
@@ -470,6 +491,10 @@ textarea {
   height: 5%;
   display: block;
   max-height: 93px;
+}
+
+.textarea:hover {
+  border-bottom: 2px solid #52759e;
 }
 
 .boton_5 {
@@ -493,4 +518,79 @@ textarea {
 .section {
   padding: 35px;
   padding-left: 80px;
+}
+
+.fondo {
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.form_1 {
+  padding: 15px;
+  background-color: white;
+  margin-top: 80px;
+  border-radius: 1%;
+}
+
+.contenedor_11 {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.title_1 {
+  text-align: center;
+  color: #253c57;
+  font-size: 40px;
+}
+
+.input_form {
+  font-size: 20px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-bottom: 2px solid #253c57;
+  margin-bottom: 15px;
+}
+
+.input_form:hover {
+  border-bottom: 2px solid #52759e;
+}
+
+.boton_6 {
+  width: 100%;
+  outline: none;
+  border: none;
+  background: #253c57;
+  font-size: 20px;
+  color: whitesmoke;
+  padding: 15px 20px;
+  cursor: pointer;
+  resize: none;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+.boton_6:hover {
+  background: #52759e;
+  transition: all 2s ease;
+}
+
+.link {
+  text-decoration: none;
+  color: #253c57;
+  font-weight: 600;
+}
+
+.link:hover {
+  color: #52759e;
+}
+
+@media (min-width: 700px) {
+  .form_1 {
+    margin: auto;
+    width: 500px;
+    margin-top: 50px;
+  }
 }
