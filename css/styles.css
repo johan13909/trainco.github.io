@@ -358,13 +358,6 @@ textarea {
   float: left;
 }
 
-.a2 {
-  color: white;
-  padding: 20px 30px;
-  border: none;
-  outline: none;
-}
-
 .cuadros {
   position: absolute;
   top: 95%;
@@ -448,6 +441,11 @@ textarea {
   float: right;
 }
 
+.p {
+  font-family: sans-serif;
+  color: #253c57;
+}
+
 #title_contacto {
   font-size: 65px;
 }
@@ -516,7 +514,7 @@ textarea {
 }
 
 .section {
-  padding: 35px;
+  padding: 43px;
   padding-left: 80px;
 }
 
