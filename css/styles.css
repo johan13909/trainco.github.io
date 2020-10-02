@@ -525,7 +525,7 @@ textarea {
   width: 100%;
   margin: 0 auto;
   background-repeat: no-repeat;
-  background: url(../imagenes/fondo2.jpeg);
+  background: url(../imagenes/fondo2.png);
   -webkit-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
@@ -536,7 +536,7 @@ textarea {
   width: 100%;
   margin: 0 auto;
   background-repeat: no-repeat;
-  background: url(../imagenes/fondo1.jpeg);
+  background: url(../imagenes/fondo1.png);
   -webkit-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
