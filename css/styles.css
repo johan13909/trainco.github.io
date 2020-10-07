@@ -727,3 +727,34 @@ textarea {
   margin-top: 350px;
   font-size: 13px;
 }
+
+.centrado_2 {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  text-align: right;
+  font-family: 'Bodoni MT';
+  color: white;
+  font-size: 20px;
+  float: left;
+}
+
+.contenedor_17 {
+  float: left;
+  width: 45%;
+  margin: 20px 20px;
+  height: 100%;
+  margin-bottom: 100px;
+  padding-bottom: 20px;
+  background-color: #dfdfdf;
+  transition: all 2s ease;
+  box-shadow: -6px -6px 6px #ebe8e8, 6px 6px 6px #ebe8e8;
+  border-radius: 5px;
+}
+
+.contenedor_18 {
+  float: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
