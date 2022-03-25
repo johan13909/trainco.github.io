@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
+  <?php 
+    include("Conexion/Conexion.php");
+  ?>
   <head>
     <meta charset="utf-8" />
     <link href="css/styles.css" rel="stylesheet" type="text/css" />

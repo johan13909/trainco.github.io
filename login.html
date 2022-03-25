@@ -38,29 +38,34 @@
             <a class="a1" href="#"><b>Contáctanos</b></a>
           </li>
           <li id="li">
-            <a class="a1" href="login_train.html"
-              ><b>Ingresar como Entrenador</b></a
+            <a class="a1" href="login.html"
+              ><b>Iniciar Sesion</b></a
             >
           </li>
         </ul>
       </div>
     </div>
-    <form class="form_1">
-      <h2 class="title_1">Inicio De Sesion (Cliente)</h2>
+    <div class="form_1">
+      <h2 class="title_1">Inicio De Sesion</h2>
       <div class="contenedor_11">
-        <input
-          class="input_form"
-          type="text"
-          placeholder="Telefono-Correo"
-          required
-        />
-        <input
-          class="input_form"
-          type="password"
-          placeholder="Contraseña"
-          required
-        />
-        <input type="submit" value="Iniciar Sesion" class="boton_6" />
+        <form action="validarsesion.php" method="post">
+          <input
+            class="input_form"
+            type="text"
+            placeholder="Correo"
+            name="email"
+            required
+            
+          />
+          <input
+            class="input_form"
+            type="password"
+            placeholder="Contraseña"
+            name="password"
+            required
+          />
+          <input type="submit" value="Iniciar Sesion" class="boton_6" />
+        </form>
         <hr />
         <br />
         <center>
@@ -71,10 +76,10 @@
         <center>
           <p>
             ¿No tienes cuenta?
-            <a class="link" href="registrate_client.html">Registrate</a>
+            <a class="link" href="registrate_client.php">Registrate</a>
           </p>
         </center>
       </div>
-    </form>
+    </div>
   </body>
 </html>
