@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-  <?php 
-    include("Conexion/Conexion.php");
-  ?>
   <head>
     <meta charset="utf-8" />
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
@@ -48,32 +45,64 @@
         </ul>
       </div>
     </div>
-    <form class="form_1">
+    <div class="form_1">
       <h2 class="title_1">Registrate</h2>
       <div class="contenedor_11">
-        <input
-          class="input_form"
-          type="text"
-          placeholder="Nombre Completo"
-          required
-        />
-        <input class="input_form" type="text" placeholder="Email" required />
-        <input
-          class="input_form"
-          type="password"
-          placeholder="Contraseña"
-          required
-        />
-        <input type="submit" value="Registrate" class="boton_6" />
+        <form action="registrar_usuario.php" method="get">
+          <input
+            class="input_form"
+            type="text"
+            placeholder="Nombre de Usuario"
+            name="usuario"
+            required
+          />
+          <input
+            class="input_form"
+            type="text"
+            placeholder="Nombres"
+            name="nombres"
+            required
+          />
+          <input
+            class="input_form"
+            type="text"
+            placeholder="Apellidos"
+            name="apellidos"
+            requerid
+          />
+          <input
+            class="input_form"
+            type="number"
+            placeholder="Celular"
+            required
+            name="celular"
+            requerid
+          />
+          <input 
+            class="input_form" 
+            type="email" 
+            placeholder="Correo"
+            name="correo"
+            required
+          />
+          <input
+            class="input_form"
+            type="password"
+            placeholder="Contraseña"
+            name="contraseña"
+            required
+          />
+          <input type="submit" value="Registrate" class="boton_6" />
+        </form>
         <hr />
         <br />
         <center>
           <p>
             ¿Ya tienes una cuenta?
-            <a class="link" href="login_client.html">Iniciar Sesion</a>
+            <a class="link" href="login.html">Iniciar Sesion</a>
           </p>
         </center>
       </div>
-    </form>
+    </div>
   </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -38,27 +39,30 @@
             <a class="a1" href="#"><b>Contáctanos</b></a>
           </li>
           <li id="li">
-            <a class="a1" href="login.php"
+            <a class="a1" href="login.html"
               ><b>Iniciar Sesion</b></a
             >
           </li>
         </ul>
       </div>
     </div>
-    <form class="form_1">
+    <div class="form_1">
       <h2 class="title_1">Inicio De Sesion</h2>
       <div class="contenedor_11">
-        <form action="validarsesion.php" method="post">
+        <form action="validar_sesion.php" method="post">
           <input
             class="input_form"
             type="text"
-            placeholder=" Telefono-Correo"
+            placeholder="Correo"
+            name="email"
             required
+            
           />
           <input
             class="input_form"
             type="password"
             placeholder="Contraseña"
+            name="password"
             required
           />
           <input type="submit" value="Iniciar Sesion" class="boton_6" />
@@ -73,10 +77,10 @@
         <center>
           <p>
             ¿No tienes cuenta?
-            <a class="link" href="registrate_train.html">Registrate</a>
+            <a class="link" href="registrate_client.html">Registrate</a>
           </p>
         </center>
       </div>
-    </form>
+    </div>
   </body>
 </html>
