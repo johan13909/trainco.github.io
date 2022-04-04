@@ -1,6 +1,7 @@
 <?php
 
 include("conexion/conexion.php");
+error_reporting(0);
 
 $correo=$_POST['email'];
 $pass=$_POST['password'];
@@ -13,7 +14,7 @@ $resultado=mysqli_query($con, $consulta);
 $filas=mysqli_fetch_array($resultado);
 
 if($filas['Id_rol']==1){
-    header("location:administrador.php");
+    header("location:Menus_internos/index.php");
 }
 else{
     if($filas['Id_rol']==2){
