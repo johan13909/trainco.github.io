@@ -8,6 +8,7 @@ if($varsesion == null || $varsesion=''){
 }
 
 include("obtener_nombre.php");
+include("Backend/Listar_usuarios.php");
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +45,7 @@ include("obtener_nombre.php");
 </head>
 
 <body>
-    <div class="container-xxl position-relative bg-white d-flex p-0">
+    <div class="">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -100,82 +101,68 @@ include("obtener_nombre.php");
                             <span class="d-none d-lg-inline-flex"><?php echo $correo; ?></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">Cerrar sesion</a>
+                            <a href="../cerrar_sesion.php" class="dropdown-item">Cerrar sesion</a>
                         </div>
                     </div>
                 </div>
             </nav>
             <!-- Navbar End -->
-
+            <br>
 
             <!-- Recent Sales Start -->
             <div class="container-fluid pt-4 px-4">
+                <div class="col-sm-12 col-md-6 col-xl-4">
+                    <form action="administrar_usuarios.php" method="POST">
+                        <div class="d-flex mb-2">
+                            <input class="form-control bg-transparent" type="text" name="buscar" placeholder="Buscar">
+                            <input type="submit" class="btn btn-primary ms-2" value="Buscar"></button>
+                        </div>
+                    </form>
+                </div>
                 <div class="bg-light text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Recent Salse</h6>
-                        <a href="">Show All</a>
+                        <h6 class="mb-0">Lista de usuarios</h6>
                     </div>
                     <div class="table-responsive">
                         <table class="table text-start align-middle table-bordered table-hover mb-0">
                             <thead>
                                 <tr class="text-dark">
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Invoice</th>
-                                    <th scope="col">Customer</th>
-                                    <th scope="col">Amount</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Action</th>
+                                    <th scope="col">Usuario</th>
+                                    <th scope="col">Nombres</th>
+                                    <th scope="col">Apellidos</th>
+                                    <th scope="col">Celular</th>
+                                    <th scope="col">correo</th>
+                                    <th scope="col">Fecha Registro</th>
+                                    <th scope="col">Rol</th>
+                                    <th scope="col">Accion</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php while($filas=mysqli_fetch_array($result)){ ?>
                                 <tr>
-                                    <td>01 Jan 2045</td>
-                                    <td>INV-0123</td>
-                                    <td>Jhon Doe</td>
-                                    <td>$123</td>
-                                    <td>Paid</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+                                    <td><?php echo $filas['Nom_usuario'] ?></td>
+                                    <td><?php echo $filas['Nombres'] ?></td>
+                                    <td><?php echo $filas['Apellidos'] ?></td>
+                                    <td><?php echo $filas['Celular'] ?></td>
+                                    <td><?php echo $filas['Email'] ?></td>
+                                    <td><?php echo $filas['Fec_regis'] ?></td>
+                                    <td><?php echo $filas['Rol'] ?></td>
+                                    <td>
+                                        <a title="Actualizar" type="button" class="btn btn-outline-primary m-2" href="Actualizar.php?id=<?php echo $filas['Id_User']?>">+</button>
+                                        <a title="Eliminar" type="button" class="btn btn-outline-danger m-2" href="Backend/eliminar_proceso.php?id=<?php echo $filas['Id_User']?>">-</button>
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <td>01 Jan 2045</td>
-                                    <td>INV-0123</td>
-                                    <td>Jhon Doe</td>
-                                    <td>$123</td>
-                                    <td>Paid</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
-                                <tr>
-                                    <td>01 Jan 2045</td>
-                                    <td>INV-0123</td>
-                                    <td>Jhon Doe</td>
-                                    <td>$123</td>
-                                    <td>Paid</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
-                                <tr>
-                                    <td>01 Jan 2045</td>
-                                    <td>INV-0123</td>
-                                    <td>Jhon Doe</td>
-                                    <td>$123</td>
-                                    <td>Paid</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
-                                <tr>
-                                    <td>01 Jan 2045</td>
-                                    <td>INV-0123</td>
-                                    <td>Jhon Doe</td>
-                                    <td>$123</td>
-                                    <td>Paid</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
             <!-- Recent Sales End -->
-
-            
+            <br>
+            <form action="administrar_usuarios.php" align="center">
+                <input type="submit" class="btn btn-light m-2" value="Limpiar Filtro"></button>
+            </form>
 
         </div>
         <!-- Content End -->

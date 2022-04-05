@@ -17,7 +17,7 @@ $resultado=mysqli_query($con, $registro);
 
 
 if($resultado == true){
-    header("location:12_gracias_por_registrarte_user.html");
+    header("location:12_gracias_por_registrarte_user.php?nombres=" . $_GET['nombres']);
 }
 else{
     include("registrate_client.html");

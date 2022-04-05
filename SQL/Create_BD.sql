@@ -12,12 +12,7 @@ create table Usuarios (
     primary key (Id_User)
 );
 
-INSERT INTO usuarios VALUES ('','jvargas','Johan','Vargas
-3022311809
-Johan.softwaresql@gmail.com
-123456789
-2022-04-01 00:00:00
-1);
+INSERT INTO usuarios VALUES ('','jvargas','Johan','Vargas',3022311809,'Johan.softwaresql@gmail.com','123456789','2022-04-01 00:00:00',1);
 
 
 create table Rol_usuarios(

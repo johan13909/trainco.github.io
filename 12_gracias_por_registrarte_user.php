@@ -31,7 +31,7 @@
           <hr />
           <br />
           <font size="6">
-            Hola Johan Vargas tu registro fue satisfactorio,
+            Hola <?php $nombres2 = $_GET['nombres']; echo $nombres2 ?> tu registro fue satisfactorio,
             <p>ya puedes disfrutar de nuestros servicios.</p>
           </font>
           <br />

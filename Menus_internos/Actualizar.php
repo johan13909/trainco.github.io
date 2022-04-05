@@ -8,6 +8,21 @@ if($varsesion == null || $varsesion=''){
 }
 
 include("obtener_nombre.php");
+include("../conexion/conexion.php");
+
+if (!isset($_GET['id'])){
+    header("location:404.html");
+}
+
+$id_user = $_GET['id'];
+
+$update = "SELECT * FROM usuarios a 
+INNER JOIN rol_usuarios B ON A.Id_rol = B.Id_rol
+where a.Id_User = '$id_user';";
+$objet = mysqli_query($con,$update);
+
+while($rows=mysqli_fetch_array($objet)) {
+
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +59,7 @@ include("obtener_nombre.php");
 </head>
 
 <body>
-    <div class="">
+    <div class="container-xxl position-relative bg-white d-flex p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -74,7 +89,7 @@ include("obtener_nombre.php");
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Configuracion</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="administrar_usuarios.php" class="dropdown-item">Administrar usuarios</a>
+                            <a href="administrar_usuarios.php" class="dropdown-item">Administrar datos</a>
                         </div>
                     </div>
                 </div>
@@ -106,17 +121,66 @@ include("obtener_nombre.php");
                 </div>
             </nav>
             <!-- Navbar End -->
+            <br>
 
-            <!-- Blank Start -->
+            <!-- Recent Sales Start -->
             <div class="container-fluid pt-4 px-4">
-                <div class="row vh-100 bg-light rounded align-items-center justify-content-center mx-0">
-                    <div class="col-md-6 text-center">
-                        <h3>Bienvenido al portal del Administrador <?php echo $nombre; ?></h3>
-                    </div>
+                <div class="">
+                    <div class="">
+                            <div class="bg-light rounded h-100 p-4">
+                                <h6 class="mb-4">Actualizar usuarios</h6>
+                                    <form method="POST" action="backend/Actualizar_proceso.php">
+                                        <div class="form-floating mb-3">
+                                            <input type="hidden" value="<?php echo $rows['Id_User'] ?>" name="id">
+                                            <input type="text" class="form-control" id="floatingInput" 
+                                            value="<?php echo $rows['Nom_usuario'] ?>" name="usuario">
+                                            <label for="floatingInput">Usuario</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingInput" 
+                                            value="<?php echo $rows['Nombres'] ?>" name="nombres">
+                                            <label for="floatingInput">Nombres</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingInput" 
+                                            value="<?php echo $rows['Apellidos'] ?>" name="apellidos">
+                                            <label for="floatingInput">Apellidos</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="number" class="form-control" id="floatingInput" 
+                                            value="<?php echo $rows['Celular'] ?>" name="celular">
+                                            <label for="floatingInput">Celular</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="floatingInput" 
+                                            value="<?php echo $rows['Email'] ?>" name="correo">
+                                            <label for="floatingInput">Correo</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <select name="roles" class="form-select" id="floatingSelect" 
+                                            aria-label="Floating label select example">
+                                                <option selected></option>
+                                                <?php
+                                                    $List = mysqli_query($con,"SELECT Id_rol,Rol FROM rol_usuarios");
+                                                    while($options = $List->fetch_assoc()):
+                                                        $id_rol = $options['Id_rol'];
+                                                        $name = $options['Rol'];
+                                                        echo "<option value='$id_rol'>$name</option>";
+                                                    endwhile;
+                                                ?>
+                                            </select>
+                                            <label for="floatingSelect">Rol: <?php echo $rows['Rol'] ?></label>
+                                        </div>
+                                        <div class="form-floating">
+                                            <button type="submit" class="btn btn-primary">Editar</button>
+                                        </div>
+                                    </form>
+                                    <?php } ?>
+                            </div>
+                        </div>
                 </div>
             </div>
-            <!-- Blank End -->
-
+            <!-- Recent Sales End -->
         </div>
         <!-- Content End -->
 
