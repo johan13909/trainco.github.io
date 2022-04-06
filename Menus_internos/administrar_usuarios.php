@@ -79,6 +79,14 @@ include("Backend/Listar_usuarios.php");
                         </div>
                     </div>
                 </div>
+                <div class="navbar-nav w-100">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Solicitudes</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="solicitudes_pendientes_admin.php" class="dropdown-item">Solicitudes pentiendes</a>
+                        </div>
+                    </div>
+                </div>
             </nav>
         </div>
         <!-- Sidebar End -->
@@ -148,8 +156,10 @@ include("Backend/Listar_usuarios.php");
                                     <td><?php echo $filas['Fec_regis'] ?></td>
                                     <td><?php echo $filas['Rol'] ?></td>
                                     <td>
-                                        <a title="Actualizar" type="button" class="btn btn-outline-primary m-2" href="Actualizar.php?id=<?php echo $filas['Id_User']?>">+</button>
-                                        <a title="Eliminar" type="button" class="btn btn-outline-danger m-2" href="Backend/eliminar_proceso.php?id=<?php echo $filas['Id_User']?>">-</button>
+                                        <a title="Actualizar" type="button" class="btn btn-outline-primary m-2" 
+                                        href="Actualizar.php?id=<?php echo $filas['Id_User']?>"><i class="bi bi-arrow-clockwise"></i></button>
+                                        <a title="Eliminar" type="button" class="btn btn-outline-danger m-2" 
+                                        href="Backend/eliminar_proceso.php?id=<?php echo $filas['Id_User']?>"><i class="bi bi-trash"></i></button>
                                     </td>
                                 </tr>
                                 <?php } ?>

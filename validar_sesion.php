@@ -18,11 +18,11 @@ if($filas['Id_rol']==1){
 }
 else{
     if($filas['Id_rol']==2){
-        header("location:cliente.html");
+        header("location:servicios_categorias.php");
     }
     else{
         if($filas['Id_rol']==3){
-            header("location:entrenador.html");
+            header("location:Menus_internos/index_entrenador.php");
         }
         else{
             include("login.html");

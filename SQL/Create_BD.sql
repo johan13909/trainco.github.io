@@ -1,6 +1,6 @@
 CREATE DATABASE train_co;
 create table Usuarios (
-	Id_User int not null auto_increment,
+	Id_user int not null auto_increment,
     Nom_usuario VARCHAR(100) UNIQUE,
     Nombres VARCHAR(100),
     Apellidos VARCHAR(100),
@@ -24,5 +24,16 @@ create table Rol_usuarios(
 insert into rol_usuarios values ('','Administrador',1);
 insert into rol_usuarios values ('','Cliente',1);
 insert into rol_usuarios values ('','Entrenador',1);
+
+Create table servicios(
+    Id_servicio INT not NULL AUTO_INCREMENT,
+    Id_user_cliente INT not NULL,
+    Id_user_entrenador INT DEFAULT null,
+    fec_registro timestamp default CURRENT_TIMESTAMP,
+    fecregis_entrenador timestamp default CURRENT_TIMESTAMP,
+    Activo BIT,
+    primary key (Id_servicio)
+);
+
 
 ALTER TABLE usuarios ADD FOREIGN KEY (Id_rol) REFERENCES Rol_usuarios(Id_rol);
