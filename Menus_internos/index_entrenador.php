@@ -72,7 +72,7 @@ include("obtener_nombre.php");
                 </div>
                 <div class="navbar-nav w-100">
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Solicitudes</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="bix1 bi-list-check"></i>Solicitudes</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             <a href="solicitudes_pendientes.php" class="dropdown-item">Solicitudes pentiendes</a>
                         </div>

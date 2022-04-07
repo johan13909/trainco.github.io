@@ -23,7 +23,7 @@ $resultado=mysqli_query($con, $sql) or die ('Error en el query database');
 $filas=mysqli_fetch_assoc($resultado);
 
 foreach($filas as $id_entrenador){
-    $update = "UPDATE SERVICIOS set Id_user_entrenador = '$id_entrenador', fecregis_entrenador='$hoy' where Id_servicio = '$id_serv' ";
+    $update = "UPDATE SERVICIOS set Id_user_entrenador = '$id_entrenador' where Id_servicio = '$id_serv' ";
   }
 
   $result=mysqli_query($con, $update) or die ('Error en el query database');

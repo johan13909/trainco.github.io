@@ -58,7 +58,7 @@ include("Backend/Listar_clientes_pendientes.php");
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
-                <a href="index.php" class="navbar-brand mx-4 mb-3">
+                <a href="index_entrenador.php" class="navbar-brand mx-4 mb-3">
                     <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>TRAIN-CO</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
@@ -73,7 +73,7 @@ include("Backend/Listar_clientes_pendientes.php");
                 </div>
                 <div class="navbar-nav w-100">
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Solicitudes</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="bi bi bi-list-check"></i>Solicitudes</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             <a href="#" class="dropdown-item">Solicitudes pendientes</a>
                         </div>
